@@ -1,0 +1,39 @@
+name: CI
+
+on: [push]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: Set LIBCLANG_PATH
+        run: echo "LIBCLANG_PATH=$((gcm clang).source -replace "clang.exe")" >> $env:GITHUB_ENV
+      - name: Prepare Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: Swatinem/rust-cache@v1
+      - name: Build
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release
+      - run: mkdir staging
+      - name: Create a mod archive
+        working-directory: staging
+        run: |
+          mkdir -p ./red4ext/plugins
+          mkdir -p ./r6/scripts
+          cp -R ../reds/* ./r6/scripts
+          cp ../target/release/*.dll ./red4ext/plugins/
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          path: |
+            staging/**/*
