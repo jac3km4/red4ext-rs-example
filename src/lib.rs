@@ -9,6 +9,7 @@ define_plugin! {
         register_function!("SumInts", sum_ints);
         register_function!("PluginName", plugin_name);
         register_function!("Convert", convert);
+        register_function!("Append", append);
     }
 }
 
@@ -22,4 +23,8 @@ fn plugin_name() -> String {
 
 fn convert(name: String) -> TweakDBID {
     TweakDBID::new(&name)
+}
+
+fn append(base: TweakDBID, suffix: String) -> TweakDBID {
+    TweakDBID::new_from_base(&base, suffix.as_str())
 }
