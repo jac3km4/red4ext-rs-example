@@ -1,4 +1,5 @@
-use red4ext_rs::{prelude::*, interop::TweakDBID};
+use red4ext_rs::{prelude::*};
+use red4ext_sys::interop::TweakDBID;
 
 define_plugin! {
     name: "example",

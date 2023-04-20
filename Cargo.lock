@@ -36,12 +36,6 @@ version = "0.1.0"
 source = "git+https://github.com/jac3km4/const-combine?rev=v0.1.4#1a3310b205964b72f8bb15223a4fd31285e7c1d2"
 
 [[package]]
-name = "const-crc32"
-version = "1.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23eeda20729a10d016ff87bc5b3547d771e7aa9e356ec2e65abd899c02c2d66e"
-
-[[package]]
 name = "cxx"
 version = "1.0.66"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -131,15 +125,13 @@ dependencies = [
 [[package]]
 name = "red4ext-rs"
 version = "0.1.0"
-source = "git+https://github.com/Roms1383/red4ext-rs.git?rev=498dedd#498deddbe9c3f6a2172b5acf43d84398af7e3c73"
+source = "git+https://github.com/Roms1383/red4ext-rs.git?rev=bfd5776#bfd577687ed2a6ccbade8720227eb57bb7417a22"
 dependencies = [
  "array-init",
  "const-combine",
- "const-crc32",
- "cxx",
- "cxx-build",
  "erasable",
  "once_cell",
+ "red4ext-sys",
  "wchar",
 ]
 
@@ -148,6 +140,16 @@ name = "red4ext-rs-example"
 version = "0.1.0"
 dependencies = [
  "red4ext-rs",
+ "red4ext-sys",
+]
+
+[[package]]
+name = "red4ext-sys"
+version = "0.1.0"
+source = "git+https://github.com/Roms1383/red4ext-rs.git?rev=bfd5776#bfd577687ed2a6ccbade8720227eb57bb7417a22"
+dependencies = [
+ "cxx",
+ "cxx-build",
 ]
 
 [[package]]
