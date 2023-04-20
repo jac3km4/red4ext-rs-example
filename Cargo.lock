@@ -130,7 +130,7 @@ dependencies = [
 [[package]]
 name = "red4ext-rs"
 version = "0.1.0"
-source = "git+https://github.com/Roms1383/red4ext-rs.git?rev=b50ddcf#b50ddcf67b6c63e313cb9614bf4f0466a28457b0"
+source = "git+https://github.com/Roms1383/red4ext-rs.git?rev=98713df#98713df629b0e94bad0092d9459e9a5e2f2cf740"
 dependencies = [
  "array-init",
  "const-combine",
@@ -150,7 +150,7 @@ dependencies = [
 [[package]]
 name = "red4ext-sys"
 version = "0.1.0"
-source = "git+https://github.com/Roms1383/red4ext-rs.git?rev=b50ddcf#b50ddcf67b6c63e313cb9614bf4f0466a28457b0"
+source = "git+https://github.com/Roms1383/red4ext-rs.git?rev=98713df#98713df629b0e94bad0092d9459e9a5e2f2cf740"
 dependencies = [
  "const-crc32",
  "cxx",
