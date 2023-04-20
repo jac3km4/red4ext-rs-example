@@ -7,5 +7,4 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-red4ext-rs = { git = "https://github.com/Roms1383/red4ext-rs.git", rev = "bfd5776" }
-red4ext-sys = { git = "https://github.com/Roms1383/red4ext-rs.git", rev = "bfd5776" }
+red4ext-rs = { git = "https://github.com/Roms1383/red4ext-rs.git", rev = "b50ddcf" }
