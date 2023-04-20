@@ -25,6 +25,11 @@ fn convert(name: String) -> TweakDBID {
     TweakDBID::new(&name)
 }
 
+
+/// test in CET like:
+/// ```swift
+/// LogChannel(CName.new("DEBUG"), TDBID.Create("A.Test") == Append(TDBID.Create("A."), "Test"));
+/// ```
 fn append(base: TweakDBID, suffix: String) -> TweakDBID {
     TweakDBID::new_from_base(&base, suffix.as_str())
 }
