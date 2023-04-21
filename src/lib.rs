@@ -8,7 +8,7 @@ define_plugin! {
         register_function!("SumInts", sum_ints);
         register_function!("PluginName", plugin_name);
         register_function!("CreateTweakDBID", create_tweakdb_id);
-        register_function!("Append", append);
+        register_function!("AppendToTweakDBID", append_to_tweakdb_id);
     }
 }
 
@@ -27,8 +27,8 @@ fn create_tweakdb_id(name: String) -> TweakDBID {
 
 /// test in CET like:
 /// ```swift
-/// LogChannel(CName.new("DEBUG"), TDBID.Create("A.Test") == Append(TDBID.Create("A."), "Test"));
+/// LogChannel(CName.new("DEBUG"), TDBID.Create("A.Test") == AppendToTweakDBID(TDBID.Create("A."), "Test"));
 /// ```
-fn append(base: TweakDBID, suffix: String) -> TweakDBID {
+fn append_to_tweakdb_id(base: TweakDBID, suffix: String) -> TweakDBID {
     TweakDBID::new_from_base(&base, suffix.as_str())
 }
