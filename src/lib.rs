@@ -12,14 +12,28 @@ define_plugin! {
     }
 }
 
+/// SumInts
+/// 
+/// test in CET like:
+/// ```swift
+/// LogChannel(CName.new("DEBUG"), ToString(SumInts([2000, 77])));
+/// ```
 fn sum_ints(ints: Vec<i32>) -> i32 {
     ints.iter().sum()
 }
 
+/// PluginName
+/// 
+/// test in CET like:
+/// ```swift
+/// LogChannel(CName.new("DEBUG"), PluginName());
+/// ```
 fn plugin_name() -> String {
     String::from("RED4EXT.RS.EXAMPLE")
 }
 
+/// CreateTweakDBID
+/// 
 /// test in CET like:
 /// ```swift
 /// LogChannel(CName.new("DEBUG"), CreateTweakDBID("A.Test"));
@@ -29,6 +43,8 @@ fn create_tweakdb_id(name: String) -> TweakDBID {
 }
 
 
+/// AppendToTweakDBID
+/// 
 /// test in CET like:
 /// ```swift
 /// LogChannel(CName.new("DEBUG"), TDBID.Create("A.Test") == AppendToTweakDBID(TDBID.Create("A."), "Test"));
