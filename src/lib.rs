@@ -1,4 +1,4 @@
-use red4ext_rs::{prelude::*};
+use red4ext_rs::prelude::*;
 
 define_plugin! {
     name: "example",
