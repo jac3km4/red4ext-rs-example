@@ -20,6 +20,10 @@ fn plugin_name() -> String {
     String::from("RED4EXT.RS.EXAMPLE")
 }
 
+/// test in CET like:
+/// ```swift
+/// LogChannel(CName.new("DEBUG"), CreateTweakDBID("A.Test"));
+/// ```
 fn create_tweakdb_id(name: String) -> TweakDBID {
     TweakDBID::new(&name)
 }
