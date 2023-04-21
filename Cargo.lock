@@ -3,12 +3,6 @@
 version = 3
 
 [[package]]
-name = "array-init"
-version = "2.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6945cc5422176fc5e602e590c2878d2c2acd9a4fe20a4baa7c28022521698ec6"
-
-[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -130,9 +124,8 @@ dependencies = [
 [[package]]
 name = "red4ext-rs"
 version = "0.1.0"
-source = "git+https://github.com/jac3km4/red4ext-rs.git?rev=1d777e5#1d777e5a798790d709d887242763249b097b089a"
+source = "git+https://github.com/jac3km4/red4ext-rs.git?tag=v0.1.19#b39558fa160fa7b30b9aed13c74f7ff9bcee812c"
 dependencies = [
- "array-init",
  "const-combine",
  "erasable",
  "once_cell",
@@ -150,7 +143,7 @@ dependencies = [
 [[package]]
 name = "red4ext-sys"
 version = "0.1.0"
-source = "git+https://github.com/jac3km4/red4ext-rs.git?rev=1d777e5#1d777e5a798790d709d887242763249b097b089a"
+source = "git+https://github.com/jac3km4/red4ext-rs.git?tag=v0.1.19#b39558fa160fa7b30b9aed13c74f7ff9bcee812c"
 dependencies = [
  "const-crc32",
  "cxx",
