@@ -3,25 +3,10 @@
 version = 3
 
 [[package]]
-name = "array-init"
-version = "2.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6945cc5422176fc5e602e590c2878d2c2acd9a4fe20a4baa7c28022521698ec6"
-
-[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
-
-[[package]]
-name = "casey"
-version = "0.3.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fabe85130dda9cf267715582ce6cf1ab581c8dfe3cb33f7065fee0f14e3fea14"
-dependencies = [
- "syn",
-]
 
 [[package]]
 name = "cc"
@@ -38,6 +23,16 @@ dependencies = [
  "termcolor",
  "unicode-width",
 ]
+
+[[package]]
+name = "const-combine"
+version = "0.1.0"
+source = "git+https://github.com/jac3km4/const-combine?rev=v0.1.4#1a3310b205964b72f8bb15223a4fd31285e7c1d2"
+
+[[package]]
+name = "const-crc32"
+version = "1.1.0"
+source = "git+https://git.shipyard.rs/Roms1383/const-crc32?rev=9c688f3ad1#9c688f3ad1e01c92da7e65dc5365f8cb47e38df6"
 
 [[package]]
 name = "cxx"
@@ -129,13 +124,12 @@ dependencies = [
 [[package]]
 name = "red4ext-rs"
 version = "0.1.0"
-source = "git+https://github.com/jac3km4/red4ext-rs.git?rev=v0.1.11#f080644cbed1c6a5c325a7a436cfd8d2022706ab"
+source = "git+https://github.com/jac3km4/red4ext-rs.git?tag=v0.1.19#b39558fa160fa7b30b9aed13c74f7ff9bcee812c"
 dependencies = [
- "array-init",
- "casey",
- "cxx",
- "cxx-build",
+ "const-combine",
  "erasable",
+ "once_cell",
+ "red4ext-sys",
  "wchar",
 ]
 
@@ -144,6 +138,16 @@ name = "red4ext-rs-example"
 version = "0.1.0"
 dependencies = [
  "red4ext-rs",
+]
+
+[[package]]
+name = "red4ext-sys"
+version = "0.1.0"
+source = "git+https://github.com/jac3km4/red4ext-rs.git?tag=v0.1.19#b39558fa160fa7b30b9aed13c74f7ff9bcee812c"
+dependencies = [
+ "const-crc32",
+ "cxx",
+ "cxx-build",
 ]
 
 [[package]]
