@@ -1,7 +1,7 @@
 @addMethod(PlayerPuppet)
 public func TryTDBID() -> Void {
  let name = PluginName();
- let plugin = Convert(name);
+ let plugin = CreateTweakDBID(name);
  let expected = TDBID.Create(name);
  if Equals(plugin, expected) {
   LogChannel(n"DEBUG", s"OK => TweakID: \(TDBID.ToStringDEBUG(plugin))");

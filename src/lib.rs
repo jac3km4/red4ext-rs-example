@@ -7,7 +7,7 @@ define_plugin! {
     on_register: {
         register_function!("SumInts", sum_ints);
         register_function!("PluginName", plugin_name);
-        register_function!("Convert", convert);
+        register_function!("CreateTweakDBID", create_tweakdb_id);
         register_function!("Append", append);
     }
 }
@@ -20,7 +20,7 @@ fn plugin_name() -> String {
     String::from("RED4EXT.RS.EXAMPLE")
 }
 
-fn convert(name: String) -> TweakDBID {
+fn create_tweakdb_id(name: String) -> TweakDBID {
     TweakDBID::new(&name)
 }
 
