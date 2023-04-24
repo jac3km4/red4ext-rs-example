@@ -27,6 +27,6 @@ jobs:
           mkdir -p ./r6/scripts
           cp -R ../reds/* ./r6/scripts
           cp ../target/release/*.dll ./red4ext/plugins/
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           path: staging/**/*
