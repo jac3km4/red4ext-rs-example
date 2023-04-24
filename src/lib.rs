@@ -16,7 +16,7 @@ define_plugin! {
 /// 
 /// test in CET like:
 /// ```swift
-/// LogChannel(CName.new("DEBUG"), ToString(SumInts([2000, 77])));
+/// LogChannel(CName.new("DEBUG"), SumInts({2000, 77}));
 /// ```
 fn sum_ints(ints: Vec<i32>) -> i32 {
     ints.iter().sum()
