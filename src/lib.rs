@@ -36,7 +36,7 @@ fn plugin_name() -> String {
 /// 
 /// test in CET like:
 /// ```swift
-/// LogChannel(CName.new("DEBUG"), CreateTweakDBID("A.Test"));
+/// LogChannel(CName.new("DEBUG"), TDBID.ToStringDEBUG(CreateTweakDBID("A.Test")));
 /// ```
 fn create_tweakdb_id(name: String) -> TweakDBID {
     TweakDBID::new(&name)
