@@ -9,7 +9,7 @@ license = "MIT"
 crate-type = ["cdylib"]
 
 [dependencies]
-red4ext-rs = { git = "https://github.com/jac3km4/red4ext-rs.git", tag = "v0.2.0" }
+red4ext-rs = { git = "https://github.com/jac3km4/red4ext-rs.git", tag = "v0.3.0" }
 
 [profile.release]
 lto = "thin"

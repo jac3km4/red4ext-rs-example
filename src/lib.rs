@@ -2,8 +2,8 @@ use red4ext_rs::prelude::*;
 
 define_plugin! {
     name: "example",
-    author: "jekky",
-    version: 1:0:0,
+    author: "author",
+    version: 0:1:0,
     on_register: {
         register_function!("SumInts", sum_ints);
         register_function!("PluginName", plugin_name);
@@ -13,7 +13,7 @@ define_plugin! {
 }
 
 /// SumInts
-/// 
+///
 /// test in CET like:
 /// ```lua
 /// LogChannel(CName.new("DEBUG"), SumInts({2000, 77}));
@@ -23,7 +23,7 @@ fn sum_ints(ints: Vec<i32>) -> i32 {
 }
 
 /// PluginName
-/// 
+///
 /// test in CET like:
 /// ```lua
 /// LogChannel(CName.new("DEBUG"), PluginName());
@@ -33,22 +33,21 @@ fn plugin_name() -> String {
 }
 
 /// CreateTweakDBID
-/// 
+///
 /// test in CET like:
 /// ```lua
 /// LogChannel(CName.new("DEBUG"), TDBID.ToStringDEBUG(CreateTweakDBID("A.Test")));
 /// ```
-fn create_tweakdb_id(name: String) -> TweakDBID {
-    TweakDBID::new(&name)
+fn create_tweakdb_id(name: String) -> TweakDbId {
+    TweakDbId::new(&name)
 }
 
-
 /// AppendToTweakDBID
-/// 
+///
 /// test in CET like:
 /// ```lua
 /// LogChannel(CName.new("DEBUG"), TDBID.Create("A.Test") == AppendToTweakDBID(TDBID.Create("A."), "Test"));
 /// ```
-fn append_to_tweakdb_id(base: TweakDBID, suffix: String) -> TweakDBID {
-    TweakDBID::new_from_base(&base, suffix.as_str())
+fn append_to_tweakdb_id(base: TweakDbId, suffix: String) -> TweakDbId {
+    TweakDbId::new_from_base(base, suffix.as_str())
 }

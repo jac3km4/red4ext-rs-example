@@ -82,6 +82,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "num_enum"
+version = "0.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7a015b430d3c108a207fd776d2e2196aaf8b1cf8cf93253e3a097ff3085076a1"
+dependencies = [
+ "num_enum_derive",
+]
+
+[[package]]
+name = "num_enum_derive"
+version = "0.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "96667db765a921f7b295ffee8b60472b686a51d4f21c2ee4ffdb94c7013b65a6"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.15",
+]
+
+[[package]]
 name = "once_cell"
 version = "1.17.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -107,12 +127,13 @@ dependencies = [
 
 [[package]]
 name = "red4ext-rs"
-version = "0.1.0"
-source = "git+https://github.com/jac3km4/red4ext-rs.git?tag=v0.2.0#38dce29b045cf7ed1daafb926d93762fa8c602ed"
+version = "0.3.0"
+source = "git+https://github.com/jac3km4/red4ext-rs.git?tag=v0.3.0#218e582566cacf176bc00d75e1d1573f28de6ec2"
 dependencies = [
  "const-combine",
  "once_cell",
  "red4ext-sys",
+ "thiserror",
  "wchar",
 ]
 
@@ -125,12 +146,13 @@ dependencies = [
 
 [[package]]
 name = "red4ext-sys"
-version = "0.1.0"
-source = "git+https://github.com/jac3km4/red4ext-rs.git?tag=v0.2.0#38dce29b045cf7ed1daafb926d93762fa8c602ed"
+version = "0.3.0"
+source = "git+https://github.com/jac3km4/red4ext-rs.git?tag=v0.3.0#218e582566cacf176bc00d75e1d1573f28de6ec2"
 dependencies = [
  "const-crc32",
  "cxx",
  "cxx-build",
+ "num_enum",
 ]
 
 [[package]]
@@ -168,6 +190,26 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "be55cf8942feac5c765c2c993422806843c9a9a45d4d5c407ad6dd2ea95eb9b6"
 dependencies = [
  "winapi-util",
+]
+
+[[package]]
+name = "thiserror"
+version = "1.0.40"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "978c9a314bd8dc99be594bc3c175faaa9794be04a5a5e153caba6915336cebac"
+dependencies = [
+ "thiserror-impl",
+]
+
+[[package]]
+name = "thiserror-impl"
+version = "1.0.40"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f9456a42c5b0d803c8cd86e73dd7cc9edd429499f37a3550d286d5e86720569f"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.15",
 ]
 
 [[package]]
