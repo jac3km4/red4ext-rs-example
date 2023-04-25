@@ -15,7 +15,7 @@ define_plugin! {
 /// SumInts
 /// 
 /// test in CET like:
-/// ```swift
+/// ```lua
 /// LogChannel(CName.new("DEBUG"), SumInts({2000, 77}));
 /// ```
 fn sum_ints(ints: Vec<i32>) -> i32 {
@@ -25,7 +25,7 @@ fn sum_ints(ints: Vec<i32>) -> i32 {
 /// PluginName
 /// 
 /// test in CET like:
-/// ```swift
+/// ```lua
 /// LogChannel(CName.new("DEBUG"), PluginName());
 /// ```
 fn plugin_name() -> String {
@@ -35,7 +35,7 @@ fn plugin_name() -> String {
 /// CreateTweakDBID
 /// 
 /// test in CET like:
-/// ```swift
+/// ```lua
 /// LogChannel(CName.new("DEBUG"), TDBID.ToStringDEBUG(CreateTweakDBID("A.Test")));
 /// ```
 fn create_tweakdb_id(name: String) -> TweakDBID {
@@ -46,7 +46,7 @@ fn create_tweakdb_id(name: String) -> TweakDBID {
 /// AppendToTweakDBID
 /// 
 /// test in CET like:
-/// ```swift
+/// ```lua
 /// LogChannel(CName.new("DEBUG"), TDBID.Create("A.Test") == AppendToTweakDBID(TDBID.Create("A."), "Test"));
 /// ```
 fn append_to_tweakdb_id(base: TweakDBID, suffix: String) -> TweakDBID {
